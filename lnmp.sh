@@ -25,7 +25,7 @@ echo "安装epel源"
 yum install -y epel-release
 sleep 30
 echo "Nginx installing..."
-yum insatll -y nginx
+yum install -y nginx
 sleep 20
 clear 
 echo "firewall resetting"
