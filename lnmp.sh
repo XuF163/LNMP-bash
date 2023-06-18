@@ -1,7 +1,6 @@
 #!bin/bash
 #这是给linux课设用的
-#作者QQ：32481311490
-#2023.6.18 于江苏大学
+#2023.6.18 于ujs
 echo "root权限检验中...”
 if [ $USER = root ]
 then
