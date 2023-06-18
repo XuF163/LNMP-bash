@@ -25,7 +25,7 @@ fi
 
 clear
 echo "---------------------"
-echo ”安装epel源"
+echo "安装epel源"
 yum install -y epel-release
 sleep 30
 echo "Nginx installing..."
