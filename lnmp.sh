@@ -10,7 +10,12 @@ else
      echo "root鉴权失败"
      exit
 fi
-
+#更换阿里源
+yum install wget
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+yum makecache
+clear
 systemctl disable firewalld.service 
 if [ $? -eq 0 ];then
   echo "防火墙已设置为开机不启动"
