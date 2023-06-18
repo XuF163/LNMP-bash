@@ -47,13 +47,15 @@ clear
 
 sleep 5
 echo "php installing"
-echo "[php]
+cat>/etc/yum.repos.d/php.repo<<EOF
+[php]
 name = php Repository
 baseurl = https://repo.webtatic.com/yum/el7/x86_64/
-gpgcheck = 0">/etc/yum.repos.d/php.repo
+gpgcheck = 0
+EOF
 echo "usr rest for php"
 sed -i '/^user/c user = www' /etc/php-fpm.d/www.conf
- sed -i '/^group/c group = www' /etc/php-fpm.d/www.conf
+sed -i '/^group/c group = www' /etc/php-fpm.d/www.conf
 clear
 echo "auto staring for php..."
  systemctl start php-fpm&&systemctl enable php-fpm
