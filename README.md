@@ -2,7 +2,7 @@
 简单的lnmp安装jiao本
 执行
 
-···
+```
 bash < <(curl -sL raw.githubusercontent.com/XuF163/LNMP-bash/main/lnmp.sh)
 ```
 
