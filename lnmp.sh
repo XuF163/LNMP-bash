@@ -55,6 +55,6 @@ echo "auto staring for php..."
  systemctl start php-fpm&&systemctl enable php-fpm
 echo "Finished intalling `php -v`"
 
-elear
+clear
 echo "Insatlling mdb ..."
  yum install mariadb-server mariadb -y&&systemctl start mariadb&&systemctl enable mariadb&&mysqladmin password '123456'&&mysql -uroot -p123456&&echo "database installed"
