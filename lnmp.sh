@@ -1,7 +1,7 @@
 #!bin/bash
 #这是给linux课设用的
 #2023.6.18 于ujs
-echo "root权限检验中...”
+echo "root authening"
 if [ $USER = root ]
 then
      echo "获取到root,lnmp安装脚本，启动！"
@@ -10,7 +10,7 @@ else
      exit
 fi
 #更换阿里源
-yum install wget
+yum install -y wget
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 yum makecache
